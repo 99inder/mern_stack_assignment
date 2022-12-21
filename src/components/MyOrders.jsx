@@ -14,7 +14,9 @@ const MyOrders = ({ showAlert }) => {
         if (!user) {
             navigate('/login');
         }
-        fetchOrders();
+        else{
+            fetchOrders();
+        }
         // eslint-disable-next-line
     }, [])
 
