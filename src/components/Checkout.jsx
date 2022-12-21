@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { actionCreators } from "../redux";
 import { useSelector } from "react-redux";
 
-const Checkout = ({showAlert}) => {
+const Checkout = ({ showAlert }) => {
 
     const { cart, total_item, total_price } = useSelector(state => state.cartReducer);
 
@@ -37,8 +37,8 @@ const Checkout = ({showAlert}) => {
     return (
         <form onSubmit={handleClick}>
             <div className="h-100 d-flex justify-content-center align-items-center">
-            <p className='fs-3'>Order Checkout</p>
-        </div>
+                <p className='fs-3'>Order Checkout</p>
+            </div>
             {/* <!-- Number input --> */}
             <div className="form-outline mb-4">
                 <input type="text" id="form6Example6" pattern="\d*" className="form-control" name='phone' value={shipInfo.phone} onChange={onChange} minLength={8} maxLength={10} required />
