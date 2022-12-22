@@ -5,7 +5,8 @@ import { bindActionCreators } from 'redux';
 import { actionCreators } from '../redux';
 
 const Login = (props) => {
-    const host = "http://localhost:5000";   //Hard Coding just for now
+    const { REACT_APP_BACKEND_HOST } = process.env;
+    const host = REACT_APP_BACKEND_HOST;
     const navigate = useNavigate();     //for the purpose of redirecting to another page
 
     //to get setUser action-creator to set user state in redux store
@@ -25,7 +26,7 @@ const Login = (props) => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(credentials)
+            body: JSON.stringify({ ...credentials, email: credentials.email.toLowerCase() })
         });
         const res = await response.json();
 
