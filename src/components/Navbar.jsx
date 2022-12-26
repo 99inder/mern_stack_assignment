@@ -28,13 +28,13 @@ const Navbar = ({ showAlert }) => {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                 </div>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <div className="collapse navbar-collapse text-center" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0" >
                         <li className="nav-item">
                             <Link to='/' className="nav-link active text-light" aria-current="page">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/about' className="nav-link text-light" href="#">About</Link>
+                            <Link to='/about' className="nav-link text-light">About</Link>
                         </li>
                     </ul>
                     {!localStorage.getItem('authToken') ?
