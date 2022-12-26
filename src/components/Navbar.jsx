@@ -17,12 +17,11 @@ const Navbar = ({ showAlert }) => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div className="container-fluid">
-
                 <Link to='/' className="navbar-brand text-light">MERN App</Link>
                 <div>
                     <div className="d-lg-none" style={{ display: 'inline' }}>
                         <Link to="/cart" className="btn btn-danger mx-2 rounded-circle" role="button"><i className="fa-solid fa-cart-shopping"></i></Link>
-                        <div style={{ position: "absolute", width: "18px", height: "18px", top: "8px", right: "70px", background: "white", borderRadius: "50%", display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{total_item}</div>
+                        <div style={{ position: "absolute", width: "18px", height: "18px", top: "8px", right: "70px", background: "white", borderRadius: "50%", display: `${total_item ? "flex" : "none"}`, alignItems: 'center', justifyContent: 'center' }}>{total_item}</div>
                     </div>
 
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,7 +50,7 @@ const Navbar = ({ showAlert }) => {
                     }
                     <div className="d-none d-lg-block" style={{ position: "realtive" }}>
                         <Link to="/cart" className="btn btn-danger mx-2 rounded-circle" role="button"><i className="fa-solid fa-cart-shopping"></i></Link>
-                        <div style={{ position: "absolute", width: "18px", height: "18px", top: "8px", right: "13px", background: "white", borderRadius: "50%", display: 'flex', alignItems: 'center', justifyContent: 'center' }}>{total_item}</div>
+                        <div style={{ position: "absolute", width: "18px", height: "18px", top: "8px", right: "13px", background: "white", borderRadius: "50%", display: `${total_item ? "flex" : "none"}`, alignItems: 'center', justifyContent: 'center' }}>{total_item}</div>
                     </div>
                 </div>
             </div>
