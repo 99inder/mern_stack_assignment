@@ -3,7 +3,7 @@ const localcart = JSON.parse(localStorage.getItem('cart'));
 
 const initialState = {
     cart: localcart ? localcart : [],
-    total_item: 0,
+    total_item: totalQty(localcart),
     total_price: 0,
 };
 

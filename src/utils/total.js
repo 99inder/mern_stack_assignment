@@ -1,4 +1,8 @@
 export const totalQty = (cart) => {
+    if (cart === null) {
+        return 0;
+    }
+    
     let quantity = cart.reduce((initialVal, curElem) => {
         let { qty } = curElem;
         initialVal = initialVal + qty;
