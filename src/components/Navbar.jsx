@@ -17,7 +17,7 @@ const Navbar = ({ showAlert }) => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div className="container-fluid">
-                <Link to='/' className="navbar-brand text-light">MERN App</Link>
+                <Link to='/' className="navbar-brand text-light">MiniCom</Link>
                 <div>
                     <div className="d-lg-none" style={{ display: 'inline' }}>
                         <Link to="/cart" className="btn btn-danger mx-2 rounded-circle" role="button"><i className="fa-solid fa-cart-shopping"></i></Link>
